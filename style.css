@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
-@keyframes moveCursor {
+
+@keyframes spin {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url("images/pokeball.png"), auto;
+ 
+  cursor: url("images/pokeball.png") 25 25, auto;
+  animation: spin 2s linear infinite;
+
 }
 ::-webkit-scrollbar {
   width: 10px;
